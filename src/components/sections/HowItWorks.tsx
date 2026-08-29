@@ -56,7 +56,7 @@ export default function HowItWorks() {
                 src={arrowIcon}
                 alt=""
                 aria-hidden="true"
-                className="h-8 w-8 rotate-90 sm:h-[clamp(26px,2.906vw,55.8px)] sm:w-[clamp(24px,2.632vw,50.53px)] sm:rotate-0 sm:mt-[calc((clamp(140px,15.556vw,298.66px)-clamp(26px,2.906vw,55.8px))/2)]"
+                className="h-8 w-8 rotate-90 mr-8 sm:h-[clamp(26px,2.906vw,55.8px)] sm:w-[clamp(24px,2.632vw,50.53px)] sm:rotate-0 sm:mt-[calc((clamp(140px,15.556vw,298.66px)-clamp(26px,2.906vw,55.8px))/2)]"
               />
             )}
             <div

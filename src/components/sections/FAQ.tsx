@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import iconPlus1 from '../../assets/iconPlus1.png';
+import iconPlus2 from '../../assets/iconPlus2.png';
 
 interface FaqItem {
   question: string;
@@ -44,28 +46,52 @@ const rightColumn: FaqItem[] = [
   },
 ];
 
-function FaqAccordion({ items }: { items: FaqItem[] }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
+function FaqAccordion({
+  items,
+  openQuestion,
+  onToggle,
+}: {
+  items: FaqItem[];
+  openQuestion: string | null;
+  onToggle: (question: string) => void;
+}) {
   return (
     <div className="flex flex-col gap-3">
-      {items.map((item, index) => {
-        const isOpen = openIndex === index;
+      {items.map((item) => {
+        const isOpen = openQuestion === item.question;
         return (
-          <div key={item.question} className="rounded-panel bg-gradient-card-glass px-5 py-4">
+          <div
+            key={item.question}
+            className="rounded-panel bg-[linear-gradient(180deg,#19063C_0%,#531B93_100%)] px-5 py-4"
+            style={
+              isOpen
+                ? {
+                    // border-image ignores border-radius, so a rounded gradient
+                    // border needs two clipped background layers instead: the
+                    // card fill on the padding-box, the gold gradient behind it
+                    // on the border-box, showing through the transparent border.
+                    border: '1px solid transparent',
+                    backgroundImage:
+                      'linear-gradient(180deg, #19063C 0%, #531B93 100%), linear-gradient(180deg, #C69101 0%, #C1861A 100%)',
+                    backgroundOrigin: 'border-box, border-box',
+                    backgroundClip: 'padding-box, border-box',
+                  }
+                : undefined
+            }
+          >
             <button
               type="button"
-              onClick={() => setOpenIndex(isOpen ? null : index)}
+              onClick={() => onToggle(item.question)}
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between gap-4 text-left"
             >
               <span className="font-stolzl text-sm font-bold text-white">{item.question}</span>
-              <span
-                className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-glow-magenta text-white"
+              <img
+                src={isOpen ? iconPlus2 : iconPlus1}
+                alt=""
+                className="h-6 w-6 shrink-0"
                 aria-hidden="true"
-              >
-                {isOpen ? '−' : '+'}
-              </span>
+              />
             </button>
             {isOpen && <p className="mt-3 font-poppins text-sm text-white/70">{item.answer}</p>}
           </div>
@@ -76,13 +102,19 @@ function FaqAccordion({ items }: { items: FaqItem[] }) {
 }
 
 export default function FAQ() {
+  const [openQuestion, setOpenQuestion] = useState<string | null>(leftColumn[0].question);
+
+  const toggle = (question: string) => {
+    setOpenQuestion((current) => (current === question ? null : question));
+  };
+
   return (
     <section className="mx-auto w-full max-w-content px-5 py-10 sm:px-12 sm:py-14 lg:py-16">
       <h2 className="text-center font-burbank text-2xl font-bold uppercase text-white sm:text-3xl">FAQ</h2>
 
       <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6">
-        <FaqAccordion items={leftColumn} />
-        <FaqAccordion items={rightColumn} />
+        <FaqAccordion items={leftColumn} openQuestion={openQuestion} onToggle={toggle} />
+        <FaqAccordion items={rightColumn} openQuestion={openQuestion} onToggle={toggle} />
       </div>
     </section>
   );
