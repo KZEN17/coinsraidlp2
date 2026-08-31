@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import backgroundFull from '../../assets/backgroundFull.png';
 import backgroundOverlay from '../../assets/Background.png';
 
 // Single background for the entire page (hero, steps, footer all sit on
@@ -11,11 +10,11 @@ function BackgroundImageLayer() {
     <>
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
-        style={{ backgroundColor: '#0C031C', backgroundImage: `url(${backgroundFull})` }}
+        style={{ backgroundColor: '#0C031C', backgroundImage: `url(${backgroundOverlay})` }}
       />
       <div
         className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block"
-        style={{ backgroundColor: '#0C031C', backgroundImage: `url(${backgroundFull})` }}
+        style={{ backgroundColor: '#0C031C', backgroundImage: `url(${backgroundOverlay})` }}
       />
       {/* Background.png — layered in front of the base background image */}
       <div

@@ -11,38 +11,45 @@ const leftColumn: FaqItem[] = [
   {
     question: 'How do I join?',
     answer:
-      'Joining Coinsraid is quick and easy! Just visit coinsraid.com, click "Sign Up", and create your free account. You\'ll instantly receive your FREE Welcome Pack to kick off your game experience and start playing right away.',
+      'Joining Coinsraid is quick and easy! Just visit coinsraid.com, click "Sign Up", and create your free account. You\'ll instantly receive your FREE Welcome Bonus to kick off your game experience and start playing right away.',
   },
   {
     question: 'What makes a player eligible for prizes?',
-    answer: 'Eligibility details will be listed here.',
+    answer:
+      "To be eligible to redeem Sweeps Coins for prizes, you must: Be 18 years or older, Reside in an eligible U.S. state (see our T&C). Have a verified account (via our quick KYC process). Once verified, you'll be able to enjoy full access to Coinsraid sweepstakes system and prize redemptions.",
   },
   {
     question: 'How do I track my progress and results?',
-    answer: 'Progress and results tracking details will be listed here.',
+    answer:
+      "Your player dashboard keeps everything organized — track your Gold Coins, Sweeps Coins, wins, missions, and achievements all in one place. You'll also see your current level, rewards, and daily lootbox progress.",
   },
   {
     question: "What if there's fraud or abuse?",
-    answer: 'Fraud and abuse policy details will be listed here.',
+    answer:
+      'Coinsraid maintains a fair and secure environment for all players. Any fraudulent, abusive, or exploitative activity (like creating multiple accounts or using fake information) will result in account suspension and forfeiture of prizes. We actively monitor to keep the adventure safe and fun for everyone.',
   },
 ];
 
 const rightColumn: FaqItem[] = [
   {
     question: 'Which coin models are available?',
-    answer: 'Coin model details will be listed here.',
+    answer:
+      'Coinsraid uses two coin systems: Gold Coins (GC): Used for fun, casual play. These coins have no monetary value and are for entertainment only. Sweeps Coins (SC): Received as a bonus when you buy Gold Coins or through free methods like daily lootboxes or mail-in requests. Sweeps Coins can be used in sweepstakes games and, if eligible, can be redeemed for prizes.',
   },
   {
     question: 'Where can I play Coinsraid?',
-    answer: 'Availability details will be listed here.',
+    answer:
+      'You can play anytime, anywhere — directly through our website at coinsraid.com on desktop or mobile. Coinsraid runs smoothly in your browser, no downloads required!',
   },
   {
     question: 'When do I get paid if I win?',
-    answer: 'Payout details will be listed here.',
+    answer:
+      'Once you redeem your eligible Sweeps Coins for prizes and complete verification, payouts are processed quickly — usually within 3–5 business days. You can choose your preferred withdrawal method.',
   },
   {
     question: 'Can my account be terminated?',
-    answer: 'Account termination policy details will be listed here.',
+    answer:
+      "Yes — Coinsraid reserves the right to suspend or terminate accounts that violate our Terms of Service. This includes fraudulent activity, abuse, or play from restricted states. Don't worry, though — our team always communicates clearly and fairly before taking any action.",
   },
 ];
 

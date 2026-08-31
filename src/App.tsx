@@ -10,9 +10,11 @@ import FAQ from './components/sections/FAQ';
 export default function App() {
   return (
     <PageBackground>
-      <Header />
-      <main className="flex flex-1 flex-col">
+      <div className="grid min-h-[100dvh] grid-rows-[auto_1fr]">
+        <Header />
         <Hero />
+      </div>
+      <main className="flex flex-1 flex-col">
         <HowItWorks />
         <PromoBanner />
         <Testimonials />
