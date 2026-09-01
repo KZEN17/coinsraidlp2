@@ -2,20 +2,18 @@ import logo from '../../assets/logo.png';
 import instagramIcon from '../../assets/icons/social/social-instagram.svg';
 import facebookIcon from '../../assets/icons/social/social-facebook.svg';
 import discordIcon from '../../assets/icons/social/social-discord.svg';
-import crownIcon from '../../assets/icons/social/social-crown.svg';
 
 const socialLinks = [
-  { href: 'https://instagram.com', label: 'Instagram', icon: instagramIcon },
-  { href: 'https://facebook.com', label: 'Facebook', icon: facebookIcon },
-  { href: 'https://discord.com', label: 'Discord', icon: discordIcon },
-  { href: 'https://discord.com', label: 'Crown', icon: crownIcon },
+  { href: 'https://www.instagram.com/coins_raid/', label: 'Instagram', icon: instagramIcon },
+  { href: 'https://www.facebook.com/CoinsRaidOfficial', label: 'Facebook', icon: facebookIcon },
+  { href: 'https://discord.gg/zQnpxYZD9', label: 'Discord', icon: discordIcon },
 ];
 
 export default function Footer() {
   return (
     <footer className="mt-auto bg-bg-page-deep border-t border-white/10">
-      <div className="mx-auto  max-w-content px-5 py-8 sm:px-8 sm:py-10 lg:px-0">
-        <div className="flex flex-col items-center gap-8 text-center sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:gap-y-4 sm:text-left lg:flex-nowrap lg:justify-between">
+      <div className="mx-auto  max-w-content px-5 py-8 sm:px-8 sm:py-10">
+        <div className="flex flex-col items-center gap-8 text-center sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:gap-y-4 sm:text-left 2xl:flex-nowrap 2xl:justify-between">
           <img src={logo} alt="CoinsRaid" className="h-12 w-auto sm:h-14 lg:h-16" />
 
           <div className="flex flex-col items-center gap-3 sm:flex-row">

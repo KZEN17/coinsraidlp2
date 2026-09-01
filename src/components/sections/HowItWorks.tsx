@@ -48,18 +48,23 @@ function StepBadge({ icon, title, titleImg }: { icon: string; title: string; tit
 export default function HowItWorks() {
   return (
     <section className="mx-auto w-full max-w-content px-12 py-10 sm:py-14 lg:py-16">
-      <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-        {steps.map((step, index) => (
-          <div key={step.title} className="flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:gap-4">
-            {index > 0 && (
+      <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+        {steps.flatMap((step, index) => {
+          const nodes = [];
+          if (index > 0) {
+            nodes.push(
               <img
+                key={`arrow-${step.title}`}
                 src={arrowIcon}
                 alt=""
                 aria-hidden="true"
-                className="h-8 w-8 rotate-90 mr-8 sm:h-[clamp(26px,2.906vw,55.8px)] sm:w-[clamp(24px,2.632vw,50.53px)] sm:rotate-0 sm:mt-[calc((clamp(140px,15.556vw,298.66px)-clamp(26px,2.906vw,55.8px))/2)]"
+                className="h-8 w-8 shrink-0 rotate-90 sm:h-[clamp(26px,2.906vw,55.8px)] sm:w-[clamp(24px,2.632vw,50.53px)] sm:rotate-0"
               />
-            )}
+            );
+          }
+          nodes.push(
             <div
+              key={step.title}
               className="flex flex-col items-center text-center w-[clamp(213px,58vw,233.13px)] sm:w-[clamp(213px,15.556vw,298.66px)]"
             >
               <StepBadge icon={step.icon} title={step.title} titleImg={step.titleImg} />
@@ -67,8 +72,9 @@ export default function HowItWorks() {
                 <p className="font-stolzl text-[15px] font-normal leading-[21.08px] tracking-normal text-center text-white/80">{step.description}</p>
               </div>
             </div>
-          </div>
-        ))}
+          );
+          return nodes;
+        })}
       </div>
 
       <div className="mt-10 flex justify-center sm:mt-14">
