@@ -35,7 +35,12 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center gap-2 text-sm sm:flex-row sm:gap-6">
-            <a href="#" className="text-gray-light">
+            <a
+              href="https://docs.google.com/document/d/1mdePqU2n_6ikAzf89gSg4JX47Iq8Kisvdcv9aa1CftM/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-light"
+            >
               Terms and conditions
             </a>
           </div>
