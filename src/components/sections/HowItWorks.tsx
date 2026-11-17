@@ -1,4 +1,5 @@
 import CtaButton from '../ui/CtaButton';
+import { SIGNUP_URL } from '../../config/links';
 import stepBg from '../../assets/icons/steps/stepBg.png';
 import stepOne from '../../assets/icons/steps/stepOne.png';
 import stepTwo from '../../assets/icons/steps/stepTwo.png';
@@ -78,7 +79,7 @@ export default function HowItWorks() {
       </div>
 
       <div className="mt-10 flex justify-center sm:mt-14">
-        <CtaButton variant="join" href="#signup" className="w-full max-w-[280px] h-14">
+        <CtaButton variant="join" href={SIGNUP_URL} className="w-full max-w-[280px] h-14">
           JOIN NOW
         </CtaButton>
       </div>

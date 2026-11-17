@@ -1,4 +1,5 @@
 import CtaButton from '../ui/CtaButton';
+import { SIGNUP_URL } from '../../config/links';
 import heroBg from '../../assets/hero-bg.png';
 import heroBgMobile from '../../assets/hero-mobile.png';
 import welcomeBonus from '../../assets/welcomeBonus.png';
@@ -33,7 +34,7 @@ export default function Hero() {
         />
         <div className="absolute inset-x-0 top-[13%] z-10 flex flex-col items-center px-6">
           <img src={title} alt="100,000 GC + 1 Free SC" className="w-[60vw] max-w-[250px]" />
-          <CtaButton variant="join" href="#signup" className="mt-4 h-[48px] w-full max-w-[210px]">
+          <CtaButton variant="join" href={SIGNUP_URL} className="mt-4 h-[48px] w-full max-w-[210px]">
             PLAY NOW
           </CtaButton>
         </div>
@@ -77,7 +78,7 @@ export default function Hero() {
 
         <CtaButton
           variant="join"
-          href="#signup"
+          href={SIGNUP_URL}
           className="absolute left-1/2 top-[59.76%] z-10 w-[18.96%] -translate-x-1/2 whitespace-nowrap [font-size:2.6cqh] [height:8.78cqh]"
         >
           PLAY NOW

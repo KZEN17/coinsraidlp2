@@ -1,4 +1,5 @@
 import CtaButton from '../ui/CtaButton';
+import { SIGNUP_URL } from '../../config/links';
 import promoBanner from '../../assets/promoBanner.png';
 import promoBannerMobile from '../../assets/promoBannerMobile.png';
 
@@ -17,7 +18,7 @@ export default function PromoBanner() {
       />
 
       <div className="mt-10 flex justify-center">
-        <CtaButton variant="join" href="#signup" className="w-full max-w-[280px] h-14">
+        <CtaButton variant="join" href={SIGNUP_URL} className="w-full max-w-[280px] h-14">
           JOIN NOW
         </CtaButton>
       </div>
